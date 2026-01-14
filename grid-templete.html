@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-templete-area</title>
+
+    <style>
+       .container>*{
+        border: 3px solid gold;
+        background-color: aquamarine;
+        padding: 50px;
+       }
+
+       header{
+        grid-area: header;
+       }
+       nav{
+        grid-area: nav;
+       }
+       main{
+        grid-area: main;
+       }
+       .sidebar{
+        grid-area: sidebar;
+       }
+       .advertise{
+        grid-area: advertise;
+       }
+       footer{
+        grid-area: footer;
+       }
+
+       .container{
+        display: grid;
+        gap: 30px;
+        grid-template-areas: 
+        "header header header header"
+         "nav   main  main  sidebar"
+         "nav  main  main  advertise"
+         "footer footer footer footer";
+       }
+
+    </style>
+</head>
+<body class="container">
+    <header>
+        <h2>The Header</h2>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="">Nav 1</a></li>
+                <li><a href="">Nav 2</a></li>
+                <li><a href="">Nav 3</a></li>
+            </ul>
+        </nav>
+    
+
+    <main>
+        <h1> Main Article Area</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum officia dolorem nesciunt voluptatem nostrum placeat, alias sunt repellendus dolor adipisci tempore cupiditate minus ab, eligendi reprehenderit ducimus iste consequuntur dignissimos aliquam obcaecati veritatis assumenda tenetur nam. Sequi similique numquam nemo quibusdam doloribus cum minima aspernatur, molestiae nobis laudantium fuga ipsa.</h2>
+    </main>
+        <aside class="sidebar">
+           <h3>Sidebar</h3>
+        </aside>
+        <aside class="advertise">
+             <h3>Advertise</h3>
+        </aside>
+        
+     <footer>
+        <h2>The Footer</h2>
+    </footer>
+</body>
+</html>
