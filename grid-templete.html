@@ -9,7 +9,7 @@
        .container>*{
         border: 3px solid gold;
         background-color: aquamarine;
-        padding: 50px;
+        padding: 30px;
        }
 
        header{
@@ -38,8 +38,34 @@
         "header header header header"
          "nav   main  main  sidebar"
          "nav  main  main  advertise"
-         "footer footer footer footer";
+         "footer footer footer footer"
        }
+
+     /* responsive desing */
+
+     @media screen and (max-width:576px) {
+        .container {
+            grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "sidebar"
+            "advertise"
+            "footer"
+            
+        }
+     }
+
+     @media screen and (min-width:576px) and (max-width:992px) {
+        .container {
+               grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "sidebar main main"
+            "advertise footer footer"
+            
+        }
+     }
 
     </style>
 </head>
